@@ -1,0 +1,11 @@
+[build]
+  command = "pnpm install --dir packages/client && pnpm run build --dir packages/client"
+  publish = "packages/client/dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
