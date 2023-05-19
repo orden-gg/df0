@@ -22,15 +22,18 @@
     "@latticexyz/std-client": "2.0.0-alpha.1.169",
     "@latticexyz/utils": "2.0.0-alpha.1.169",
     "@latticexyz/world": "2.0.0-alpha.1.169",
+    "@react-three/fiber": "^8.13.0",
     "@wagmi/chains": "^0.2.22",
     "contracts": "workspace:*",
     "ethers": "^5.7.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "three": "^0.152.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
+    "@types/three": "^0.152.0",
     "@vitejs/plugin-react": "^3.1.0",
     "eslint-plugin-react": "7.31.11",
     "eslint-plugin-react-hooks": "4.6.0",
