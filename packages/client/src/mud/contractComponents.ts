@@ -5,8 +5,25 @@ import { defineComponent, Type as RecsType, World } from "@latticexyz/recs";
 
 export function defineContractComponents(world: World) {
   return {
-    Counter: (() => {
-      const tableId = new TableId("", "Counter");
+    Position: (() => {
+      const tableId = new TableId("", "Position");
+      return defineComponent(
+        world,
+        {
+          x: RecsType.Number,
+          y: RecsType.Number,
+          z: RecsType.Number,
+        },
+        {
+          metadata: {
+            contractId: tableId.toHexString(),
+            tableId: tableId.toString(),
+          },
+        }
+      );
+    })(),
+    Space: (() => {
+      const tableId = new TableId("", "Space");
       return defineComponent(
         world,
         {
