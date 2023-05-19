@@ -38,6 +38,5 @@
     "vite": "^4.2.1",
     "wait-port": "^1.0.4",
     "netlify-cli": "^15.1.1"
-  },
-  "packageManager": "pnpm@8.0.0"
+  }
 }
