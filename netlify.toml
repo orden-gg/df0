@@ -1,5 +1,6 @@
 [build]
-  command = "pnpm install --dir packages/client && pnpm run build --dir packages/client"
+  base = "packages/client"
+  command = "pnpm install && pnpm build"
   publish = "packages/client/dist"
 
 [build.environment]
