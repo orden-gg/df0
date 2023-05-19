@@ -10,7 +10,8 @@
     "initialize": "pnpm recursive run initialize",
     "mud:up": "pnpm recursive exec mud set-version -v canary && pnpm install",
     "prepare": "(forge --version || pnpm foundry:up)",
-    "test": "pnpm recursive run test"
+    "test": "pnpm recursive run test",
+    "clean": "rm -rf /Users/dudendy/Library/pnpm/store/v3 && rm -rf node_modules"
   },
   "devDependencies": {
     "@latticexyz/cli": "2.0.0-alpha.1.169+9e98a81c",
@@ -24,6 +25,5 @@
   "engines": {
     "node": "18.x",
     "pnpm": "8.x"
-  },
-  "packageManager": "pnpm@8.0.0"
+  }
 }
