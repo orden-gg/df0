@@ -1,7 +1,7 @@
 [build]
   base = "packages/client"
   command = "pnpm install && pnpm build"
-  publish = "packages/client/dist"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "18"
