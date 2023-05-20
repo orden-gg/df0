@@ -23,11 +23,11 @@
     "@ethersproject/abi": "^5.7.0",
     "@ethersproject/bytes": "^5.7.0",
     "@ethersproject/providers": "^5.7.2",
-    "@latticexyz/cli": "2.0.0-alpha.1.169",
-    "@latticexyz/schema-type": "2.0.0-alpha.1.169",
-    "@latticexyz/std-contracts": "2.0.0-alpha.1.169",
-    "@latticexyz/store": "2.0.0-alpha.1.169",
-    "@latticexyz/world": "2.0.0-alpha.1.169",
+    "@latticexyz/cli": "2.0.0-alpha.1.175",
+    "@latticexyz/schema-type": "2.0.0-alpha.1.175",
+    "@latticexyz/std-contracts": "2.0.0-alpha.1.175",
+    "@latticexyz/store": "2.0.0-alpha.1.175",
+    "@latticexyz/world": "2.0.0-alpha.1.175",
     "ethers": "^5.7.2"
   },
   "devDependencies": {
