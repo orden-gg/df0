@@ -1,5 +1,5 @@
 import WebGPU from "three/addons/capabilities/WebGPU.js";
-import CanvasWebGPU from "./CanvasWebGPU";
+import CanvasWebGPU from "./game/CanvasWebGPU";
 // import { useComponentValue } from "@latticexyz/react";
 // import { useMUD } from "./MUDContext";
 
