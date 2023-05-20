@@ -37,5 +37,21 @@ export function defineContractComponents(world: World) {
         }
       );
     })(),
+    Planet: (() => {
+      const tableId = new TableId("", "Planet");
+      return defineComponent(
+        world,
+        {
+          biome: RecsType.Number,
+          size: RecsType.Number,
+        },
+        {
+          metadata: {
+            contractId: tableId.toHexString(),
+            tableId: tableId.toString(),
+          },
+        }
+      );
+    })(),
   };
 }

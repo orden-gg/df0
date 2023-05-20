@@ -5,3 +5,4 @@ pragma solidity >=0.8.0;
 
 import { Position, PositionData, PositionTableId } from "./tables/Position.sol";
 import { Space, SpaceTableId } from "./tables/Space.sol";
+import { Planet, PlanetData, PlanetTableId } from "./tables/Planet.sol";

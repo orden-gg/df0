@@ -2,7 +2,9 @@ import { mudConfig } from "@latticexyz/world/register";
 
 export default mudConfig({
   enums: {
-    SpaceType: ["Void", "Nebula", "Space"],
+    BiomeType: ["VOID", "OCEAN", "FOREST", "DESERT"],
+    PlanetSize: ["VOID", "DWARF", "GIANT", "SUPER_GIANT"],
+    SpaceType: ["VOID", "NEBULA", "SPACE"],
   },
   tables: {
     Position: {
@@ -14,5 +16,11 @@ export default mudConfig({
       storeArgument: true,
     },
     Space: "SpaceType",
+    Planet: {
+      schema: {
+        biome: "BiomeType",
+        size: "PlanetSize",
+      },
+    },
   },
 });
