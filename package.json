@@ -24,5 +24,6 @@
   "engines": {
     "node": "18.x",
     "pnpm": "8.x"
-  }
+  },
+  "packageManager": "pnpm@8.0.0"
 }
