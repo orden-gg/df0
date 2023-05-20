@@ -9,8 +9,8 @@
     "foundry:up": "curl -L https://foundry.paradigm.xyz | bash && bash $HOME/.foundry/bin/foundryup",
     "initialize": "pnpm recursive run initialize",
     "mud:up": "pnpm recursive exec mud set-version -v canary && pnpm install",
-    "test": "pnpm recursive run test",
-    "clean": "rm -rf /Users/dudendy/Library/pnpm/store/v3 && rm -rf node_modules"
+    "prepare": "(forge --version || pnpm foundry:up)",
+    "test": "pnpm recursive run test"
   },
   "devDependencies": {
     "@latticexyz/cli": "2.0.0-alpha.1.169+9e98a81c",
