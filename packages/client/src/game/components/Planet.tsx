@@ -10,6 +10,7 @@ export const Planet = ({ position, size }: InstancedMeshProps) => {
       position={position}
       args={[undefined, undefined, 1]}
       ref={ref as any}
+      onClick={(e) => { console.log(e)}}
     >
       <sphereGeometry args={[size, 64, 64]} />
       <meshStandardMaterial color={'cyan'} />
