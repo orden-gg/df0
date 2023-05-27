@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0;
-import { System } from "@latticexyz/world/src/System.sol";
+
 import { Perlin } from "@latticexyz/noise/contracts/Perlin.sol";
 import { ABDKMath64x64 as Math } from "abdk-libraries-solidity/ABDKMath64x64.sol";
 
@@ -11,9 +11,9 @@ uint256 constant NEBULA = uint256(keccak256("space.Nebula"));
 uint256 constant SPACE = uint256(keccak256("space.Space"));
 uint256 constant DEEP_SPACE = uint256(keccak256("space.DeepSpace"));
 
-contract SpaceSystem is System {
+library SpaceLibrary {
   function getSpaceType(int256 x, int256 y) internal pure returns (uint256) {
-    int128 perlinNoise = Perlin.noise2d(x, y, 1000, 64);
+    int128 perlinNoise = Perlin.noise2d(x, y, 400, 64);
 
     // 20% Deep Space
     // 35% Space

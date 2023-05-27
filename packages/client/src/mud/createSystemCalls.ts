@@ -6,11 +6,12 @@ import { SetupNetworkResult } from "./setupNetwork";
 export type SystemCalls = ReturnType<typeof createSystemCalls>;
 
 export function createSystemCalls(
-  { worldSend, txReduced$, singletonEntity }: SetupNetworkResult,
+  { worldContract, worldSend, txReduced$, singletonEntity }: SetupNetworkResult,
   { Space }: ClientComponents
 ) {
   const getSpaceType = (x: number, y: number) => {
-    worldSend("getSpaceType", [x, y]);
+    return worldSend("getSpaceType", [x, y]);
+    // return await worldContract.callStatic.getSpaceType(x, y);
   };
 
   return { getSpaceType };

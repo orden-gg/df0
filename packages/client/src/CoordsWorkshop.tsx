@@ -29,7 +29,7 @@ export const CoordsWorkshop = () => {
         x:{" "}
         <input
           id="inp_x"
-          type="text"
+          type="number"
           value={x_val}
           onChange={() => set_x_val(Number(event?.target.value))}
         />{" "}
@@ -38,7 +38,7 @@ export const CoordsWorkshop = () => {
         y:{" "}
         <input
           id="inp_y"
-          type="text"
+          type="number"
           value={y_val}
           onChange={() => set_y_val(Number(event?.target.value))}
         />{" "}
@@ -46,7 +46,7 @@ export const CoordsWorkshop = () => {
       <button
         type="button"
         onClick={async () => {
-          const tx = await worldSend("getSpaceType", [x_val, y_val]);
+          const tx = await getSpaceType(x_val, y_val);
 
           console.log("tx", tx);
           console.log("result", await tx.wait());
