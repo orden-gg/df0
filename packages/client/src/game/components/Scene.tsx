@@ -1,9 +1,8 @@
-
-import { useRef } from 'react';
+import { useRef } from "react";
 import { ThreeElements, useThree } from "@react-three/fiber";
-import { Planet } from './Planet';
-import { Vector3 } from 'three';
-import { WORLD_SIZE } from '../../shared';
+import { Planet } from "./Planet";
+import { Vector3 } from "three";
+import { WORLD_SIZE } from "../../shared";
 
 export function Scene(props: ThreeElements["mesh"]) {
   const ref = useRef<THREE.Mesh>(null!);

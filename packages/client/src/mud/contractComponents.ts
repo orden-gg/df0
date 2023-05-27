@@ -10,9 +10,8 @@ export function defineContractComponents(world: World) {
       return defineComponent(
         world,
         {
-          x: RecsType.Number,
-          y: RecsType.Number,
-          z: RecsType.Number,
+          x: RecsType.BigInt,
+          y: RecsType.BigInt,
         },
         {
           metadata: {

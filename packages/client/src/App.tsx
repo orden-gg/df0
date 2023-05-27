@@ -1,5 +1,6 @@
 import WebGPU from "three/addons/capabilities/WebGPU.js";
 import CanvasWebGPU from "./game/CanvasWebGPU";
+import { CoordsWorkshop } from "./CoordsWorkshop";
 // import { useComponentValue } from "@latticexyz/react";
 // import { useMUD } from "./MUDContext";
 
@@ -19,6 +20,7 @@ export const App = () => {
 
   return (
     <>
+      <CoordsWorkshop />
       <CanvasWebGPU />
     </>
   );

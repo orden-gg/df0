@@ -7,10 +7,9 @@ import { PositionData } from "../codegen/tables/Position.sol";
 // import { positionToEntityKey } from "../positionToEntityKey.sol";
 
 contract MapSystem is System {
-  function distance(PositionData memory from, PositionData memory to) internal pure returns (int32) {
-    int32 deltaX = from.x > to.x ? from.x - to.x : to.x - from.x;
-    int32 deltaY = from.y > to.y ? from.y - to.y : to.y - from.y;
-    int32 deltaZ = from.z > to.z ? from.z - to.z : to.z - from.z;
-    return deltaX + deltaY + deltaZ;
+  function distance(PositionData memory from, PositionData memory to) internal pure returns (int256) {
+    int256 deltaX = from.x > to.x ? from.x - to.x : to.x - from.x;
+    int256 deltaY = from.y > to.y ? from.y - to.y : to.y - from.y;
+    return deltaX + deltaY;
   }
 }

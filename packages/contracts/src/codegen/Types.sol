@@ -19,5 +19,6 @@ enum PlanetSize {
 enum SpaceType {
   VOID,
   NEBULA,
-  SPACE
+  SPACE,
+  DEEP_SPACE
 }
