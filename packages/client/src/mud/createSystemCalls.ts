@@ -6,16 +6,13 @@ import { SetupNetworkResult } from "./setupNetwork";
 export type SystemCalls = ReturnType<typeof createSystemCalls>;
 
 export function createSystemCalls(
-  { worldSend, txReduced$, singletonEntity }: SetupNetworkResult,
-  { Counter }: ClientComponents
+  { worldContract, worldSend, txReduced$, singletonEntity }: SetupNetworkResult,
+  { Space }: ClientComponents
 ) {
-  const increment = async () => {
-    const tx = await worldSend("increment", []);
-    await awaitStreamValue(txReduced$, (txHash) => txHash === tx.hash);
-    return getComponentValue(Counter, singletonEntity);
+  const getSpaceType = (x: number, y: number) => {
+    return worldSend("getSpaceType", [x, y]);
+    // return await worldContract.callStatic.getSpaceType(x, y);
   };
 
-  return {
-    increment,
-  };
+  return { getSpaceType };
 }
