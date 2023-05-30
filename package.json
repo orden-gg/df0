@@ -5,13 +5,13 @@
     "build": "pnpm recursive run build",
     "dev": "concurrently -n contracts,client-phaser -c cyan,magenta \"cd packages/contracts && pnpm run dev\" \"cd packages/client-phaser && pnpm run dev\"",
     "dev:client-phaser": "pnpm --filter 'client-phaser' run dev",
-    "dev:client-three": "pnpm --filter 'client-three' run dev",
     "dev:contracts": "pnpm --filter 'contracts' dev",
     "foundry:up": "curl -L https://foundry.paradigm.xyz | bash && bash $HOME/.foundry/bin/foundryup",
     "initialize": "pnpm recursive run initialize",
     "mud:up": "pnpm recursive exec mud set-version -v canary && pnpm install",
     "prepare": "(forge --version || pnpm foundry:up)",
-    "test": "pnpm recursive run test"
+    "test": "pnpm recursive run test",
+    "clean": "rm -rf $HOME/Library/pnpm/store/v3 && rm -rf node_modules"
   },
   "devDependencies": {
     "@latticexyz/cli": "2.0.0-alpha.1.169+9e98a81c",
