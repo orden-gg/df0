@@ -1,21 +1,21 @@
 export enum Scenes {
-  Main = "Main",
+  Main = 'Main'
 }
 
 export enum Maps {
-  Main = "Main",
+  Main = 'Main'
 }
 
 export enum Animations {
-  SwordsmanIdle = "SwordsmanIdle",
+  SwordsmanIdle = 'SwordsmanIdle'
 }
 export enum Sprites {
-  Soldier,
+  Soldier
 }
 
 export enum Assets {
-  MainAtlas = "MainAtlas",
-  Tileset = "Tileset",
+  MainAtlas = 'MainAtlas',
+  Tileset = 'Tileset'
 }
 
 export const TILE_HEIGHT = 32;

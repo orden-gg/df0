@@ -9,6 +9,7 @@
     "dev": "wait-port localhost:8545 && vite",
     "initialize": "pnpm build",
     "preview": "vite preview",
+    "prettier": "prettier --write 'src/**/*.{ts,tsx}'",
     "test": "tsc --noEmit"
   },
   "dependencies": {

@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { NetworkLayer } from "../layers/network/createNetworkLayer";
-import { useStore } from "../store";
-import { usePhaserLayer } from "./hooks/usePhaserLayer";
+import React, { useEffect } from 'react';
+import { NetworkLayer } from '../layers/network/createNetworkLayer';
+import { useStore } from '../store';
+import { usePhaserLayer } from './hooks/usePhaserLayer';
 
 type Props = {
   networkLayer: NetworkLayer | null;

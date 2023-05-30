@@ -1,6 +1,6 @@
-import { useEffect, useMemo } from "react";
-import { createNetworkLayer } from "../../layers/network/createNetworkLayer";
-import { usePromiseValue } from "./usePromiseValue";
+import { useEffect, useMemo } from 'react';
+import { createNetworkLayer } from '../../layers/network/createNetworkLayer';
+import { usePromiseValue } from './usePromiseValue';
 
 export const useNetworkLayer = () => {
   const networkLayerPromise = useMemo(() => {

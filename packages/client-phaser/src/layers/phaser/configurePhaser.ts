@@ -3,11 +3,11 @@ import {
   AssetType,
   defineScaleConfig,
   defineMapConfig,
-  defineCameraConfig,
-} from "@latticexyz/phaserx";
-import worldTileset from "../../../public/assets/tilesets/world.png";
-import { TileAnimations, Tileset } from "../../artTypes/world";
-import { Sprites, Assets, Maps, Scenes, TILE_HEIGHT, TILE_WIDTH, Animations } from "./constants";
+  defineCameraConfig
+} from '@latticexyz/phaserx';
+import worldTileset from '../../../public/assets/tilesets/world.png';
+import { TileAnimations, Tileset } from '../../artTypes/world';
+import { Sprites, Assets, Maps, Scenes, TILE_HEIGHT, TILE_WIDTH, Animations } from './constants';
 
 const ANIMATION_INTERVAL = 200;
 
@@ -20,11 +20,11 @@ const mainMap = defineMapConfig({
   tileAnimations: TileAnimations,
   layers: {
     layers: {
-      Background: { tilesets: ["Default"] },
-      Foreground: { tilesets: ["Default"] },
+      Background: { tilesets: ['Default'] },
+      Foreground: { tilesets: ['Default'] }
     },
-    defaultLayer: "Background",
-  },
+    defaultLayer: 'Background'
+  }
 });
 
 export const phaserConfig = {
@@ -34,7 +34,7 @@ export const phaserConfig = {
         [Assets.Tileset]: {
           type: AssetType.Image,
           key: Assets.Tileset,
-          path: worldTileset,
+          path: worldTileset
         },
         [Assets.MainAtlas]: {
           type: AssetType.MultiAtlas,
@@ -42,18 +42,18 @@ export const phaserConfig = {
           // Add a timestamp to the end of the path to prevent caching
           path: `/assets/atlases/atlas.json?timestamp=${Date.now()}`,
           options: {
-            imagePath: "/assets/atlases/",
-          },
-        },
+            imagePath: '/assets/atlases/'
+          }
+        }
       },
       maps: {
-        [Maps.Main]: mainMap,
+        [Maps.Main]: mainMap
       },
       sprites: {
         [Sprites.Soldier]: {
           assetKey: Assets.MainAtlas,
-          frame: "sprites/soldier/idle/0.png",
-        },
+          frame: 'sprites/soldier/idle/0.png'
+        }
       },
       animations: [
         {
@@ -63,29 +63,29 @@ export const phaserConfig = {
           endFrame: 3,
           frameRate: 6,
           repeat: -1,
-          prefix: "sprites/soldier/idle/",
-          suffix: ".png",
-        },
+          prefix: 'sprites/soldier/idle/',
+          suffix: '.png'
+        }
       ],
       tilesets: {
         Default: {
           assetKey: Assets.Tileset,
           tileWidth: TILE_WIDTH,
-          tileHeight: TILE_HEIGHT,
-        },
-      },
-    }),
+          tileHeight: TILE_HEIGHT
+        }
+      }
+    })
   },
   scale: defineScaleConfig({
-    parent: "phaser-game",
+    parent: 'phaser-game',
     zoom: 1,
-    mode: Phaser.Scale.NONE,
+    mode: Phaser.Scale.NONE
   }),
   cameraConfig: defineCameraConfig({
     pinchSpeed: 1,
     wheelSpeed: 1,
     maxZoom: 3,
-    minZoom: 1,
+    minZoom: 1
   }),
-  cullingChunkSize: TILE_HEIGHT * 16,
+  cullingChunkSize: TILE_HEIGHT * 16
 };

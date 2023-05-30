@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 type Props = {
   children: React.ReactNode;
@@ -32,7 +32,7 @@ const Container = styled.div`
   color: white;
 
   div {
-    font-family: "Lattice Pixel", sans-serif;
+    font-family: 'Lattice Pixel', sans-serif;
   }
 
   img {

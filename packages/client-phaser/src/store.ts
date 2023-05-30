@@ -1,7 +1,7 @@
-import { createStore } from "zustand/vanilla";
-import createReactStore from "zustand";
-import { NetworkLayer } from "./layers/network/createNetworkLayer";
-import { PhaserLayer } from "./layers/phaser/createPhaserLayer";
+import { createStore } from 'zustand/vanilla';
+import createReactStore from 'zustand';
+import { NetworkLayer } from './layers/network/createNetworkLayer';
+import { PhaserLayer } from './layers/phaser/createPhaserLayer';
 
 export type Store = {
   networkLayer: NetworkLayer | null;
@@ -18,7 +18,7 @@ export type UIStore = {
 export const store = createStore<Store>(() => ({
   networkLayer: null,
   phaserLayer: null,
-  devMode: false,
+  devMode: false
 }));
 
 export const useStore = createReactStore(store);
@@ -27,12 +27,12 @@ export const useMUD = () => {
   const { networkLayer, phaserLayer, devMode } = useStore();
 
   if (networkLayer === null || phaserLayer === null) {
-    throw new Error("Store not initialized");
+    throw new Error('Store not initialized');
   }
 
   return {
     networkLayer,
     phaserLayer,
-    devMode,
+    devMode
   } as UIStore;
 };

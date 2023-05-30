@@ -1,17 +1,17 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import useResizeObserver, { ResizeHandler } from "use-resize-observer";
-import { throttle } from "lodash";
-import { createPhaserLayer } from "../../layers/phaser/createPhaserLayer";
-import { NetworkLayer } from "../../layers/network/createNetworkLayer";
-import { usePromiseValue } from "./usePromiseValue";
-import { phaserConfig } from "../../layers/phaser/configurePhaser";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import useResizeObserver, { ResizeHandler } from 'use-resize-observer';
+import { throttle } from 'lodash';
+import { createPhaserLayer } from '../../layers/phaser/createPhaserLayer';
+import { NetworkLayer } from '../../layers/network/createNetworkLayer';
+import { usePromiseValue } from './usePromiseValue';
+import { phaserConfig } from '../../layers/phaser/configurePhaser';
 
 const createContainer = () => {
-  const container = document.createElement("div");
-  container.style.width = "100vw";
-  container.style.height = "100vh";
-  container.style.pointerEvents = "all";
-  container.style.overflow = "hidden";
+  const container = document.createElement('div');
+  container.style.width = '100vw';
+  container.style.height = '100vh';
+  container.style.pointerEvents = 'all';
+  container.style.overflow = 'hidden';
   return container;
 };
 
@@ -40,9 +40,9 @@ export const usePhaserLayer = ({ networkLayer }: Props) => {
           parent: container,
           mode: Phaser.Scale.NONE,
           width,
-          height,
-        },
-      }),
+          height
+        }
+      })
     };
 
     // We don't want width/height to recreate phaser layer, so we ignore linter
@@ -66,7 +66,7 @@ export const usePhaserLayer = ({ networkLayer }: Props) => {
 
   useResizeObserver({
     ref: container,
-    onResize,
+    onResize
   });
 
   const ref = useCallback(

@@ -1,23 +1,23 @@
-import React from "react";
-import styled from "styled-components";
-import { SyncState } from "@latticexyz/network";
-import { LoadingBar } from "./LoadingBar";
-import { BootScreen } from "./BootScreen";
-import { useComponentValue } from "@latticexyz/react";
-import { useMUD } from "../../store";
+import React from 'react';
+import styled from 'styled-components';
+import { SyncState } from '@latticexyz/network';
+import { LoadingBar } from './LoadingBar';
+import { BootScreen } from './BootScreen';
+import { useComponentValue } from '@latticexyz/react';
+import { useMUD } from '../../store';
 
 export const LoadingScreen = () => {
   const {
     networkLayer: {
       components: { LoadingState },
-      singletonEntity,
-    },
+      singletonEntity
+    }
   } = useMUD();
 
   const loadingState = useComponentValue(LoadingState, singletonEntity, {
-    msg: "Connecting...",
+    msg: 'Connecting...',
     percentage: 0,
-    state: SyncState.CONNECTING,
+    state: SyncState.CONNECTING
   });
 
   if (loadingState.state === SyncState.LIVE) {

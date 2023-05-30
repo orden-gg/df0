@@ -1,6 +1,6 @@
-import { createClientComponents } from "./createClientComponents";
-import { createSystemCalls } from "./createSystemCalls";
-import { setupNetwork } from "./setupNetwork";
+import { createClientComponents } from './createClientComponents';
+import { createSystemCalls } from './createSystemCalls';
+import { setupNetwork } from './setupNetwork';
 
 export type SetupResult = Awaited<ReturnType<typeof setup>>;
 
@@ -11,6 +11,6 @@ export async function setup() {
   return {
     network,
     components,
-    systemCalls,
+    systemCalls
   };
 }

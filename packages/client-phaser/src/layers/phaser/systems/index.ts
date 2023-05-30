@@ -1,1 +1,1 @@
-export * from "./registerSystems";
+export * from './registerSystems';
